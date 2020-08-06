@@ -5,6 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExerciseComponent } from './components/exercise/exercise.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/*material jazz */
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,10 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
