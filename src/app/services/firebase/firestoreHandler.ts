@@ -1,4 +1,4 @@
-const config = require('../../../../FirebaseConfig.ts')
+const config = require('FirebaseConfig.ts')
 const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");

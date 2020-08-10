@@ -44,3 +44,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+# Firebase Config
+/src/app/services/firebase/FirebaseConfig.ts
