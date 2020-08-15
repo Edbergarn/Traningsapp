@@ -1,13 +1,18 @@
-<div class="container">
-  <div *ngIf="auth.user | async as user; else showLogin">
+<!-- <div class="container"> -->
+  <!-- <div *ngIf="auth.user | async as user; else showLogin">
     <h1>Hello {{ user.displayName }}!</h1>
+    <p>{{ token }}</p>
     <button (click)="logout()">Logout</button>
   </div>
   <ng-template #showLogin>
     <p>Please login.</p>
     <button (click)="login()">Login with Google</button>
   </ng-template>
-  <app-navigation-bar></app-navigation-bar>
+  <button [routerLink]="['/login']" routerLinkActive="router-link-active" >Loginpage</button> -->
+  <button (click)="logout()" >Sign out</button>
+
+  <router-outlet></router-outlet>
+  <!-- <app-navigation-bar></app-navigation-bar> -->
 
 
 
@@ -32,4 +37,4 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
 
-</div>
+<!-- </div> -->
