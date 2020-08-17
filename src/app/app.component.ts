@@ -18,29 +18,4 @@ export class AppComponent {
 
   }
   title = 'tranings-app';
-  login() {
-    this.authService.doGoogleLogin();
-    // this.auth.signInWithPopup(new auth.GoogleAuthProvider()).then(function(result) {
-    //   var token = result.credential.providerId;
-    //   console.log(token)
-    //   var user = result.user;
-    // });
-    // firebase.auth().getRedirectResult().then(function(result) {
-    //   if (result.credential) {
-    //     // This gives you the OAuth Access Token for that provider.
-    //     var token = result.credential.accessToken;
-    //   }
-    //   var user = result.user;
-    // });
-  }
-  logout() {
-    this.authService.signOut();
-    // this.router.navigate(['login']).then( (e) => {
-    //   if (e) {
-    //     console.log("Navigation is successful!");
-    //   } else {
-    //     console.log("Navigation has failed!");
-    //   }
-    // });
-  }
 }

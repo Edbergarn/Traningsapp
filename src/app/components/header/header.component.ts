@@ -19,10 +19,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.auth.currentUser;
-    console.log(this.auth.currentUser)
   }
   signout() {
-    console.log('log')
     this.authService.signOut();
     // setTimeout(() => {
     //   this.router.navigate(['login']);
