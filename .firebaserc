@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "traningsapp-b35dc"
+  },
+  "targets": {
+    "traningsapp-b35dc": {
+      "hosting": {
+        "tranings-app": [
+          "traningsapp-b35dc"
+        ]
+      }
+    }
   }
 }

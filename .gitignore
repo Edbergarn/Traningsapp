@@ -46,3 +46,5 @@ testem.log
 Thumbs.db
 # Firebase Config
 /src/app/services/firebase/FirebaseConfig.ts
+src/environments/environment.ts
+src/environments/environment.prod.ts
