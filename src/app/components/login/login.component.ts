@@ -19,23 +19,8 @@ export class LoginComponent{
     ){
     this.user = auth.user;
   }
-  login(){
+  loginWithGoogle(){
     this.authService.doGoogleLogin();
-  }
-
-  loginGoogle() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-      .then(userCredentials => {
-        /* LOGIN OK */
-        this.router.navigateByUrl('');
-      })
-      .catch(err => {
-        /* LOGIN ERR */
-        alert(err.message);
-      })
-      .finally(() => {
-        /* DO SOMETHING IN ANY CASE */
-      });
   }
 
   signOut(){

@@ -7,14 +7,14 @@ import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo } from
 import { ExerciseComponent } from './components/exercise/exercise.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToNavigationBar = () => redirectLoggedInTo([""]);
+const redirectLoggedInToNavigationBar = () => redirectLoggedInTo(['']);
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/' },
+  // { path: '', pathMatch: 'full', redirectTo: '/' },
   { path: '',
     pathMatch: 'full',
-    component: NavigationBarComponent, 
+    component: NavigationBarComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin }
   },
@@ -22,12 +22,7 @@ const routes: Routes = [
     component: LoginComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectLoggedInToNavigationBar }
-  },
-  { path: 'exercise',
-    component: ExerciseComponent,
-    canActivate: [AngularFireAuthGuard],
-    // data: { authGuardPipe: redirectLoggedInToNavigationBar }
-  },
+  }
 ];
 
 @NgModule({

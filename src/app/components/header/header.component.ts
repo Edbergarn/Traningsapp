@@ -14,22 +14,19 @@ export class HeaderComponent implements OnInit {
   constructor(
     public auth: AngularFireAuth, 
     private authService: AuthenticationService,
-    // private router: Router
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.user = this.auth.currentUser;
-    console.log(this.user)
+    console.log(this.auth.currentUser)
   }
-  logout() {
+  signout() {
+    console.log('log')
     this.authService.signOut();
-    // this.router.navigate(['login']).then( (e) => {
-    //   if (e) {
-    //     console.log("Navigation is successful!");
-    //   } else {
-    //     console.log("Navigation has failed!");
-    //   }
-    // });
+    // setTimeout(() => {
+    //   this.router.navigate(['login']);
+    // }, 100);
   }
 
 }

@@ -13,13 +13,16 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AuthenticationService } from './services/auth/authentication.service';
 import { AuthGuardService } from './services/auth/auth-guard.service';
-import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+// import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 /*material jazz */
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
-import { SettingsComponent } from './components/settings/settings.component';
 import { LoginComponent } from './components/login/login.component';
+import { SettingsComponent } from './components/pages/settings/settings.component';
+import { HomescreenComponent } from './components/pages/homescreen/homescreen.component';
+import { ScheduleComponent } from './components/pages/schedule/schedule.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { LoginComponent } from './components/login/login.component';
     ExerciseComponent,
     NavigationBarComponent,
     SettingsComponent,
-    LoginComponent
+    LoginComponent,
+    HomescreenComponent,
+    ScheduleComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,7 @@ import { LoginComponent } from './components/login/login.component';
   providers: [
     AuthenticationService,
     AuthGuardService,
-    AngularFireAuthGuard
+    // AngularFireAuthGuard
   ],
   bootstrap: [AppComponent]
 })
